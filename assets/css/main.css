@@ -321,6 +321,7 @@ h6 {
     margin-right: 10px;
     cursor: pointer;
     transition: color 0.3s;
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.2), 0px 3px 6px rgba(50, 50, 50, 0.3);
   }
 
   .navmenu {
