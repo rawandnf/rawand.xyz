@@ -37,7 +37,7 @@
   /**
    * Hide mobile nav on same-page/hash links
    */
-  document.querySelectorAll('#navmenu a').forEach(navmenu => {
+  document.querySelectorAll('#navmenu a:not(.item-link-toggle-dropdown)').forEach(navmenu => {
     navmenu.addEventListener('click', () => {
       if (document.querySelector('.mobile-nav-active')) {
         mobileNavToogle();
@@ -62,7 +62,7 @@
       e.preventDefault();
       this.classList.toggle('active');
       this.nextElementSibling.classList.toggle('dropdown-active');
-    }, false);
+    });
   });
 
   /**
