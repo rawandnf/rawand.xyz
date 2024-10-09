@@ -57,6 +57,14 @@
       e.stopImmediatePropagation();
     });
   });
+  document.querySelectorAll('.navmenu .item-link-toggle-dropdown').forEach(navmenu => {
+    navmenu.addEventListener('click', function(e) {
+      e.preventDefault();
+      this.classList.toggle('active');
+      this.nextElementSibling.classList.toggle('dropdown-active');
+      e.stopImmediatePropagation();
+    });
+  });
 
   /**
    * Preloader
