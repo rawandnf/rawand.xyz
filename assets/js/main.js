@@ -62,7 +62,6 @@
       e.preventDefault();
       this.classList.toggle('active');
       this.nextElementSibling.classList.toggle('dropdown-active');
-      e.stopImmediatePropagation();
     });
   });
 
