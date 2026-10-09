@@ -1,0 +1,202 @@
+:root {
+  color-scheme: dark;
+  font-family: "DM Sans", system-ui, sans-serif;
+  background: #0e0b13;
+  color: #f7f4fb;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  min-width: 320px;
+  margin: 0;
+  background:
+    radial-gradient(ellipse at 50% -10%, rgba(150, 105, 215, .22), transparent 48%),
+    #0e0b13;
+}
+
+a { color: inherit; text-decoration: none; }
+
+.page {
+  width: min(100% - 32px, 600px);
+  min-height: 100vh;
+  min-height: 100dvh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.intro { text-align: center; }
+
+.home-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin: 26px auto 38px;
+  color: #bcb3c8;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: .03em;
+  transition: color .2s ease;
+}
+
+.home-link:hover { color: #fff; }
+
+.home-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: 1px solid #443651;
+  border-radius: 10px;
+  color: #fff;
+  font-family: Outfit, sans-serif;
+  font-size: 17px;
+  letter-spacing: -.08em;
+}
+
+.home-mark span { color: #c9a9fa; }
+
+.profile-mark {
+  display: grid;
+  place-items: center;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 22px;
+  padding: 4px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #a98bd8, #6b4e99);
+  box-shadow: 0 0 0 7px rgba(169, 139, 216, .07), 0 18px 50px rgba(0, 0, 0, .25);
+}
+
+.profile-mark img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: #c9a9fa;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .19em;
+  text-transform: uppercase;
+}
+
+h1, h2, p { margin-top: 0; }
+
+h1, h2 { font-family: Outfit, system-ui, sans-serif; }
+
+h1 {
+  margin-bottom: 10px;
+  font-size: clamp(34px, 8vw, 44px);
+  font-weight: 800;
+  letter-spacing: -.055em;
+  line-height: 1.05;
+}
+
+.intro-text {
+  max-width: 390px;
+  margin: 0 auto 38px;
+  color: #bcb3c8;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.link-section { margin-bottom: 28px; }
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 14px;
+}
+
+h2 {
+  flex: none;
+  margin: 0;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.section-line { height: 1px; flex: 1; background: #382d46; }
+
+.link-list { display: grid; gap: 10px; }
+
+.link-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  min-height: 78px;
+  padding: 13px 18px;
+  border: 1px solid #3b304a;
+  border-radius: 17px;
+  background: #1b1723;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, .09);
+  transition: transform .2s ease, border-color .2s ease, background .2s ease;
+}
+
+.link-card:hover {
+  transform: translateY(-2px);
+  border-color: #9f7bd4;
+  background: #272032;
+}
+
+.link-card:focus-visible, .home-link:focus-visible, .footer a:focus-visible {
+  outline: 2px solid #c9a9fa;
+  outline-offset: 3px;
+}
+
+.link-icon {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: #342842;
+  color: #d4bafa;
+  font-size: 21px;
+}
+
+.link-copy { display: grid; gap: 2px; min-width: 0; }
+
+.link-copy strong {
+  color: #f7f4fb;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.link-copy small { color: #bcb3c8; font-size: 13px; }
+
+.link-arrow { margin-left: auto; color: #a99ab8; font-size: 17px; }
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: auto;
+  padding: 11px 0 29px;
+  color: #a99ab8;
+  font-size: 12px;
+}
+
+.footer a { color: #bcb3c8; font-size: 15px; }
+.footer a:hover { color: #c9a9fa; }
+
+@media (max-width: 440px) {
+  .home-link { margin-top: 18px; margin-bottom: 29px; }
+  .profile-mark { width: 88px; height: 88px; margin-bottom: 18px; }
+  .intro-text { margin-bottom: 31px; }
+  .link-card { min-height: 72px; padding: 11px 14px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-link, .link-card { transition: none; }
+}
